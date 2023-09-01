@@ -4,6 +4,9 @@ import requests
 
 
 def home(request):
-    response = requests.get(
-        'https://juanroldan1989-moviequotes-v1.p.rapidapi.com/api/v1/quotes').json()
-    return render(request, 'html/home.html', {'response': response})
+    url = "https://api.quotable.io/quotes/random"
+
+    response = requests.get(url).json()
+    quote_content = response.get('content', '')
+
+    return render(request, 'html/home.html', {'quote_content': quote_content})
