@@ -20,7 +20,7 @@
       </svg>
       <nav>
         <img src="{% static '/logo/logo_small.png' %}" alt="" />
-        <a href="contact">Contact Us</a>
+        <a href="#contact-1">Contact Us</a>
       </nav>
     </header>
     <!-- END of HEADER -->
@@ -42,7 +42,7 @@
     <!-- end of body -->
     <!-- start of contact us -->
     <form>
-      <div class="contact-header"><h1>contact us</h1></div>
+      <div id="contact-1" class="contact-header"><h1>contact us</h1></div>
       <input
         name="name"
         type="text"
@@ -64,6 +64,30 @@
     </form>
     <!-- end of contact us -->
      <!-- Site footer -->
-    
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> |
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="contact-info">
+        <div class="address">123 Main Street, City, Country</div>
+        <div class="phone">Phone: +1 (123) 456-7890</div>
+        <div class="email">Email: info@example.com</div>
+      </div>
+      <div class="social-media">
+        <a href="#" target="_blank"
+          ><img src="/assets/icons8-facebook-50.png" alt="Facebook"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="/assets/icons8-twitter-50.png" alt="Twitter"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="/assets/icons8-instagram-48.png" alt="Instagram"
+        /></a>
+      </div>
+      <div>
+        <p>&copy; NYON. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

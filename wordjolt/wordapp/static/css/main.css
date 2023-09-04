@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap");
 :root {
+    --bg-color:#C675BB;
   --text-color-white: #fff;
   --text-color-black: #000;
-  --btn-color: ;
-  --btn-color-hover: ;
+  --btn-color: #264e86;
+  --btn-color-hover: #5f7fbc;
   --header-font: "Lora", serif;
   --body-font: "Lora", serif;
   --btn-font: "Lora", serif;
@@ -84,8 +85,100 @@ section p {
 }
 /* END OF BODY */
 /* start of contact us */
+.contact-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--body-font);
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: var(--text-color-dark);
+}
+form {
+  max-width: 420px;
+  margin: 5rem auto;
+}
+
+.feedback-input {
+  color: var(--text-color-white);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid var(--btn-color);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid var(--btn-color-hover);
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: var(--btn-color);
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: var(--text-color-white);
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+  box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.26);
+}
+[type="submit"]:hover {
+  background-color: var(--btn-color-hover);
+}
 /* end of contact us */
 
 /* start of footer */
-
+.footer {
+  background-color: var(--bg-color);
+  color: var(--text-color-dark);
+  text-align: center;
+  padding: 20px 0;
+  font-family: var(--btn-font)
+}
+.footer-links {
+  margin-top: 10px;
+}
+.footer-links a {
+  color: var(--text-color-dark);
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer-links a:hover {
+  color: var(--btn-color-hover);
+}
+.contact-info {
+  margin-top: 20px;
+}
+.address {
+  font-size: 14px;
+}
+.social-media > a > img {
+  color: var(--btn-color);
+}
+.social-media > a > img:hover {
+  color: var(--btn-color-hover);
+}
 /* end of footer */
