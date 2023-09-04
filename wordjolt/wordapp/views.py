@@ -9,3 +9,6 @@ def home(request):
     # response = requests.get(url).json()
 # , {'response':response }
     return render(request, 'html/home.html')
+
+def main(request):
+    return render(request, 'html/main.html')
