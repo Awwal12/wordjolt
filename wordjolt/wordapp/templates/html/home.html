@@ -1,12 +1,69 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/main.css' %}" />
     <title>Home</title>
   </head>
   <body>
+    <!-- HEADER -->
+    <header>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+        <path
+          fill="#EB7FBE"
+          fill-opacity="1"
+          d="M0,288L60,266.7C120,245,240,203,360,202.7C480,203,600,245,720,224C840,203,960,117,1080,106.7C1200,96,1320,160,1380,192L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+        ></path>
+      </svg>
+      <nav>
+        <img src="{% static '/logo/logo_small.png' %}" alt="" />
+        <a href="contact">Contact Us</a>
+      </nav>
+    </header>
+    <!-- END of HEADER -->
+    <!-- Start of body -->
+    <section class="body-container">
+      <br />
+      <h1 class="wel-header">Welcome To WordJolt</h1>
+      <br />
+      <span class="inner-p"
+        >An application to check for your favourite quotes</span
+      >
+      <p>
+        <br />
+        Find and discover amazing quotes from our wide variety, what are u
+        waiting for
+      </p>
+      <a class="btn" href="">click to get started</a>
+    </section>
+    <!-- end of body -->
+    <!-- start of contact us -->
+    <form>
+      <div class="contact-header"><h1>contact us</h1></div>
+      <input
+        name="name"
+        type="text"
+        class="feedback-input"
+        placeholder="Name"
+      />
+      <input
+        name="email"
+        type="text"
+        class="feedback-input"
+        placeholder="Email"
+      />
+      <textarea
+        name="text"
+        class="feedback-input"
+        placeholder="Comment"
+      ></textarea>
+      <input type="submit" value="SUBMIT" />
+    </form>
+    <!-- end of contact us -->
+     <!-- Site footer -->
     
-    {{response}}
   </body>
 </html>
