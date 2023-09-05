@@ -1,11 +1,15 @@
-{% extends 'html/base_html.html'%} {% load static %} {%block title %} Home
+{% extends 'html/base_html.html'%} {% load static %}
+{% block cssfile %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}" />
+{% endblock cssfile %}
+{%block title %} Home
 {%endblock%} {% block content %}
 <section class="body-container">
   <br />
   <h1 class="wel-header">Welcome To WordJolt</h1>
   <br />
   <span class="inner-p">An application to check for your favourite quotes</span>
-  <p>
+  <p class="deeper-p">
     <br />
     Find and discover amazing quotes from our wide variety, what are u waiting
     for

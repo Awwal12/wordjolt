@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static '/css/reset.css' %}" />
-    <link rel="stylesheet" href="{% static '/css/home.css' %}" />
+    {% block cssfile %}  
+    {% endblock cssfile %}
     <link
       rel="shortcut icon"
       href="{% static '/logo/logo_small_icon_only_inverted.png' %}"
@@ -29,7 +30,12 @@
       </nav>
     </header>
 
-    {% block content %} {% endblock %} {%block contactus%}{%endblock%}
+    {% block content %} {% endblock %}
+    {%block contactus%}{%endblock%} 
+    {% block searchquote %} {% endblock searchquote %} 
+    {% block displayquote %} 
+    {%endblock displayquote %}
+
     <!-- Site footer -->
     <footer class="footer">
       <div class="footer-links">
@@ -53,7 +59,7 @@
         /></a>
       </div>
       <div>
-        <p>&copy; NYON. All rights reserved.</p>
+        <p>&copy; WordJolt. All rights reserved.</p>
       </div>
     </footer>
   </body>

@@ -1,2 +1,20 @@
-{% extends 'html/base_html.html'%} {% load static %} {%block title %} Main
+{% extends 'html/base_html.html'%} {% load static %} 
+
+{% block cssfile %}
+<link rel="stylesheet" href="{% static '/css/main.css' %}" />
+<link rel="stylesheet" href="{% static '/css/home.css' %}" />
+{% endblock cssfile %}
+    
+{%block title %}
+Main
 {%endblock%}
+
+{% block searchquote %}
+    <section class="search-body">
+        <h1 class="main-h1">Generate Your Qoute</h1>
+        <h3>Search/filter for Your favourite Qoute/Author</h3>
+        <h4>Or</h3>
+        <h3>Generate a random Qoute</h3>
+    </section>
+{% endblock searchquote %}
+    

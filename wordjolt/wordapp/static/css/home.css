@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap");
 :root {
-    --bg-color:#C675BB;
+  --bg-color: #c675bb;
   --text-color-white: #fff;
   --text-color-black: #000;
   --btn-color: #264e86;
@@ -46,7 +46,7 @@ nav img {
   font-weight: 400;
   font-size: 2.5rem;
 }
-section p {
+.deeper-p {
   font-family: var(--body-font);
   font-weight: 400;
   font-style: italic;
@@ -156,7 +156,7 @@ textarea {
   color: var(--text-color-dark);
   text-align: center;
   padding: 20px 0;
-  font-family: var(--btn-font)
+  font-family: var(--btn-font);
 }
 .footer-links {
   margin-top: 10px;
