@@ -1,20 +1,26 @@
-{% extends 'html/base_html.html'%} {% load static %} 
-
-{% block cssfile %}
-<link rel="stylesheet" href="{% static '/css/main.css' %}" />
-<link rel="stylesheet" href="{% static '/css/home.css' %}" />
-{% endblock cssfile %}
+{% extends 'html/base_html.html'%} {% load static %} {%block title %} Main
+{%endblock%} {% block searchquote %}
+<section class="idea">
+  <h1 class="main-h1">Generate Your Qoute</h1>
+  <h3 class="main-h3">Search/filter for Your favourite Qoute/Author</h3>
+  <h4>Or</h4>
+  <h3 class="main-h3">Generate a random Qoute</h3>
+</section>
+{% endblock searchquote %} 
+{% block displayquote %}
+<div class="quote-container"> 
+<div class="quote-block">
+{% if api_data %}
     
-{%block title %}
-Main
+    {% for item in api_data %}
+    <blockquote>
+       <div class="quote-get"> {{item.content}}</div>
+        -<cite><div class="author-get">{{item.author}}</div></cite>
+        </blockquote>
+    {% endfor %}
+    {% else %}
+    <p>no avaiable data</p>
+{% endif %}
+</div>
+</div>
 {%endblock%}
-
-{% block searchquote %}
-    <section class="search-body">
-        <h1 class="main-h1">Generate Your Qoute</h1>
-        <h3>Search/filter for Your favourite Qoute/Author</h3>
-        <h4>Or</h3>
-        <h3>Generate a random Qoute</h3>
-    </section>
-{% endblock searchquote %}
-    

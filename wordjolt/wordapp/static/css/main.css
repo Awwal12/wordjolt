@@ -9,16 +9,39 @@
   --body-font: "Lora", serif;
   --btn-font: "Lora", serif;
 }
-/* .search-body {
+.idea {
   display: flex;
   flex-direction: column;
-  align-items: center; */
-/* } */
-body{
-  background-color: red;
+  align-items: center;
+  font-family: var(--header-font);
 }
-.main-h1{
+
+.main-h1 {
   font-family: var(--header-font);
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.main-h3 {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+section h4 {
+  margin: 1rem;
+}
+.quote-container {
+  max-width: 600px; /* Set your desired maximum width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+}
+.quote-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: var(--header-font);
 }
