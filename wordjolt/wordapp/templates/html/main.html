@@ -2,16 +2,15 @@
 {%endblock%} {% block searchquote %}
 <section class="idea">
   <h1 class="main-h1">Generate Your Qoute</h1>
-  <h3 class="main-h3">Search/filter for Your favourite Qoute/Author</h3>
-  <h4>Or</h4>
-  <h3 class="main-h3">Generate a random Qoute</h3>
+  <h3 class="main-h3">click "ctrl + R" or "F5" to Generate a random Qoute</h3>
 </section>
 {% endblock searchquote %} 
 {% block displayquote %}
-<div class="quote-container"> 
+<div id="renderedData"></div>
+<div class="quote-container">
 <div class="quote-block">
-{% if api_data %}
-    
+  {% if api_data %}
+  
     {% for item in api_data %}
     <blockquote>
        <div class="quote-get"> {{item.content}}</div>
@@ -21,6 +20,30 @@
     {% else %}
     <p>no avaiable data</p>
 {% endif %}
+  <!-- <button id="renderButton" onclick="randomQuote()">Render Data</button> -->
 </div>
 </div>
 {%endblock%}
+
+<!-- {% block scriptb %}
+  <script>
+const quoteText = document.querySelector(".quote-get"),
+quoteBtn = document.getElementById("renderButton"),
+authorName = document.querySelector(".author-get")
+function randomQuote(){
+    // quoteBtn.classList.add("loading");
+    // quoteBtn.innerText = "Loading Quote...";
+    fetch("http://api.quotable.io/random").then(response => response.json()).then(result => {
+        quoteText = result.content;
+        authorName = result.author;
+        console.log(result)
+        // quoteBtn.classList.remove("loading");
+        // quoteBtn.innerText = "New Quote";
+    });
+}
+window.onload = function(){
+randomQuote();
+}
+  </script>
+{% endblock scriptb %} -->
+  
