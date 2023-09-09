@@ -21,3 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('wordapp.urls')),
 ]
+
+handler404 = 'wordapp.views.error_404_view'

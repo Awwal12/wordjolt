@@ -20,6 +20,10 @@ def main(request):
     context = {'api_data': api_data}
     return render(request, 'html/main.html', context=context)
 
+def error_404_view(request, exception=None):
+    return render(request, 'error404.html', status=404)
+
+
 # def render_template_view(request):
 #     api_data = ...  # Replace this with the logic to fetch your API data
 #     context = {'api_data': api_data}
