@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
-    <link rel="stylesheet" href="{% static 'js/script.js' %}">
+    <link rel="stylesheet" href="{% static 'js/script.js' %}" />
     <link
       rel="shortcut icon"
-      href="{% static '/logo/logo_small_icon_only_inverted.png' %}"
+      href="{% static 'logo/logo_small_icon_only_inverted.png' %}"
       type="image/x-icon"
     />
     <title>{% block title %} {% endblock %}</title>
@@ -26,7 +26,7 @@
         ></path>
       </svg>
       <nav>
-        <img src="{% static '/logo/logo_small.png' %}" alt="" />
+        <img src="{% static 'logo/logo_small.png' %}" alt="" />
         <a href="#contact-1">Contact Us</a>
       </nav>
     </header>
@@ -47,7 +47,7 @@
         <div class="email">Email: info@example.com</div>
       </div>
       <div class="social-media">
-        <a href="#" target="_blank"
+        <!-- <a href="#" target="_blank"
           ><img src="/assets/icons8-facebook-50.png" alt="Facebook"
         /></a>
         <a href="#" target="_blank"
@@ -55,15 +55,13 @@
         /></a>
         <a href="#" target="_blank"
           ><img src="/assets/icons8-instagram-48.png" alt="Instagram"
-        /></a>
+        /></a> -->
       </div>
       <div>
         <p>&copy; WordJolt. All rights reserved.</p>
       </div>
     </footer>
-   
-    {% block scriptb %}
-    {% endblock scriptb %}
 
+    {% block scriptb %} {% endblock scriptb %}
   </body>
 </html>

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import requests
 from django.http import HttpResponse
+from django.http import HttpResponseServerError
 # Create your views here.
 
 
@@ -20,8 +21,9 @@ def main(request):
     context = {'api_data': api_data}
     return render(request, 'html/main.html', context=context)
 
-def error_404_view(request, exception=None):
-    return render(request, 'error404.html', status=404)
+
+def error_404_view(request, exception):
+    return HttpResponse("<h1>404 Server Error</h1>")
 
 
 # def render_template_view(request):
